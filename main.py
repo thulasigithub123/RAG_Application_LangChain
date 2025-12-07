@@ -1,16 +1,12 @@
 from fastapi import FastAPI
 from langserve import add_routes
-
 from langsmith import traceable
-
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_community.vectorstores import FAISS
 from langchain_groq import ChatGroq
-
 from langchain_core.prompts import PromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.runnables import Runnable, RunnableParallel, RunnablePassthrough
-
 import os
 from dotenv import load_dotenv
 
@@ -23,9 +19,9 @@ load_dotenv()
 # Enable LangSmith tracing
 os.environ["LANGSMITH_TRACING"] = "true"
 os.environ["LANGCHAIN_PROJECT"] = os.getenv("LANGSMITH_PROJECT")
-os.environ["LANGCHAIN_API"] = os.getenv("LANGSMITH_API")
+os.environ["LANGCHAIN_API_KEY"] = os.getenv("LANGSMITH_API_KEY")
 
-APIKEY = os.getenv("GROQ_API")
+APIKEY = os.getenv("GROQ_API")  
 VECTOR_DB_DIR = "vectorDBstore"
 
 embeddings = HuggingFaceEmbeddings(

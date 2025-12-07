@@ -17,7 +17,7 @@ VECTOR_DB_DIR = "vectorDBstore"
 # Connect to LangServe RAG pipeline
 rag = RemoteRunnable(SERVER_URL)
 
-st.title("📚 RAG Chatbot with LangServe + Streamlit")
+st.title("📚 RAG Chatbot with LangServe + LangSmith + Langchain Core + Streamlit")
 
 # ============================================
 # 1️⃣ Upload PDF

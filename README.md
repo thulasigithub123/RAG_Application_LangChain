@@ -1,4 +1,4 @@
-# RAG_Application_LangChain
+# Grounding RAG_Application_LangChain
 
 
 # 📘 RAG Pipeline with LangChain, LangServe & Streamlit
@@ -143,10 +143,9 @@ print(response)
 langchain
 langserve
 langchain-community
-langchain-huggingface
-sentence-transformers
-faiss-cpu
-streamlit
+langchain-huggingface for sentence-transformers
+faiss-cpu for vector DB
+streamlit for POC frontend
 uvicorn
 fastapi
 ```
@@ -158,4 +157,5 @@ fastapi
 - Persistent database across sessions
 - Store multiple indexed projects
 - User authentication in Streamlit
+- history, memory and conversational chains
 
